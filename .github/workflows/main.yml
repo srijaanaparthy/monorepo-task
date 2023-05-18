@@ -1,0 +1,37 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lerna-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: "@srijaanaparthy"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
+          
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install lerna -g
+      - name: Publish packages to GitHub Package Registry
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
+        run: |
+          git config --global user.email "srija.anaparthy@gmail.com"
+          git config --global user.name "srijaanaparthy"
+          git add .
+          git commit -m "Committing changes made during the CI workflow"
+          echo 'srija'
+          npx lerna publish from-package --exact --yes --registry https://npm.pkg.github.com/
