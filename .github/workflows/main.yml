@@ -33,5 +33,4 @@ jobs:
           git config --global user.name "srijaanaparthy"
           git add .
           git commit -m "Committing changes made during the CI workflow"
-          echo 'srija'
           npx lerna publish from-package --exact --yes --registry https://npm.pkg.github.com/
