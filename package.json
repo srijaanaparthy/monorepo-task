@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "@srijaanaparthy/mono-repo",
+    "name": "@srijaanaparthy/monorepo-task",
     "workspaces": [
         "packages/*"
     ],
