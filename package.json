@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "@mono-repo",
+    "name": "mono-repo",
     "version": "1.0.0",
     "workspaces": [
         "packages/*"
