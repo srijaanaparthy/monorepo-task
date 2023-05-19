@@ -24,7 +24,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install lerna -g
       - name: Publish packages to GitHub Package Registry
         env:
           NODE_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
@@ -33,5 +32,5 @@ jobs:
           git config --global user.name "srijaanaparthy"
           git add .
           git commit -m "Committing changes made during the CI workflow"
-          echo 'srija'
           npx lerna publish from-package --exact --yes --registry https://npm.pkg.github.com/
+          

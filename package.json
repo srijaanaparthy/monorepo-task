@@ -1,6 +1,7 @@
 {
     "private": true,
     "name": "@srijaanaparthy/monorepo-task",
+    "version": "1.0.0",
     "workspaces": [
         "packages/*"
     ],
