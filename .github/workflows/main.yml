@@ -24,12 +24,11 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install yarn -g
       - name: Publish packages to GitHub Package Registry
         env:
           NODE_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
         run: |
           git config --global user.email "srija.anaparthy@gmail.com"
           git config --global user.name "srijaanaparthy"
-          yarn publish --patch
+          npx lerna publish from-package --yes --registry https://npm.pkg.github.com/
           
