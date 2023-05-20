@@ -1,5 +1,4 @@
 {
-    "access": "restricted"
     "name": "mono-repo",
     "version": "1.0.0",
     "workspaces": [
@@ -9,6 +8,7 @@
         "lerna": "^6.6.1"
     },
     "publishConfig": {
+        "access": "restricted"
         "registry": "https://npm.pkg.github.com/"
       },
       "repository": {
