@@ -33,5 +33,7 @@ jobs:
         run: |
           git config --global user.email "srija.anaparthy@gmail.com"
           git config --global user.name "srijaanaparthy"
+          git add .
+          git commit -m "Committing changes made during the CI workflow"
           npx lerna publish from-package --yes --registry https://npm.pkg.github.com/ --amend
           
