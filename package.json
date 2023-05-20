@@ -8,7 +8,7 @@
         "lerna": "^6.6.1"
     },
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
+        "@srijaanaparthy:registry": "https://npm.pkg.github.com/"
       },
       "repository": {
         "type": "git",
